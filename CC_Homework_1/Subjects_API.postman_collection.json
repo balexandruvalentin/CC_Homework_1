@@ -1,0 +1,108 @@
+{
+    "info": {
+        "name": "Subjects API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "GET All",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:19000/subjects"
+            }
+        },
+        {
+            "name": "GET by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "http://localhost:19000/subjects/1"
+            }
+        },
+        {
+            "name": "POST Subject 1",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"Name\": \"Mathematics\", \"Credits\": 3, \"Year\": 1, \"Semester\": 1, \"Description\": \"Basic Math Course\"}"
+                },
+                "url": "http://localhost:19000/subjects"
+            }
+        },
+        {
+            "name": "POST Subject 2",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"Name\": \"Physics\", \"Credits\": 4, \"Year\": 1, \"Semester\": 2, \"Description\": \"Fundamentals of Physics\"}"
+                },
+                "url": "http://localhost:19000/subjects"
+            }
+        },
+        {
+            "name": "POST by ID (405 Not Allowed)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "url": "http://localhost:19000/subjects/1"
+            }
+        },
+        {
+            "name": "PUT by ID",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"Name\": \"Advanced Mathematics\", \"Credits\": 3, \"Year\": 1, \"Semester\": 1, \"Description\": \"Updated Math Course\"}"
+                },
+                "url": "http://localhost:19000/subjects/1"
+            }
+        },
+        {
+            "name": "PUT All (405 Not Allowed)",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "url": "http://localhost:19000/subjects"
+            }
+        },
+        {
+            "name": "DELETE by ID",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "http://localhost:19000/subjects/1"
+            }
+        },
+        {
+            "name": "DELETE All (405 Not Allowed)",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "http://localhost:19000/subjects"
+            }
+        }
+    ],
+    "variable": []
+}
