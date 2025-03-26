@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API collection</h1>
+        <h4><i>Ever wanted to know the weather, generate a random number, and manage your university's subjects, all in one place for some reason? <br> Now you can!</i></h4>
+        <div class="auth-section">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button id="signupBtn">Sign Up</button>
+
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="loginBtn">Login</button>
+            <button id="logoutBtn" style="display: none;">Logout</button>
+        </div>
+
+        <div class="api-section">
+            <!-- Weather API -->
+            <label for="cityInput">Enter City:</label>
+            <input type="text" id="cityInput" placeholder="City name">
+            <button id="weatherBtn">Get Weather</button>
+            <div id="weather" class="result-box"></div>
+
+            <!-- Random Number API -->
+            <label for="minInput">Min:</label>
+            <input type="number" id="minInput" placeholder="Min value">
+            <label for="maxInput">Max:</label>
+            <input type="number" id="maxInput" placeholder="Max value">
+            <button id="randomBtn">Get Random Number</button>
+            <div id="random" class="result-box"></div>
+
+            <!-- Custom API -->
+            <div id="subjects-controls">
+                <button id="getSubjectsBtn">GET</button>
+                <button id="postSubjectsBtn">POST</button>
+                <button id="updateSubjectsBtn">UPDATE</button>
+                <button id="deleteSubjectsBtn">DELETE</button>
+            </div>
+
+            <div id="subjects-form">
+                <div id="getFields">
+                    <label for="subjectName">Subject Name:</label>
+                    <input type="text" id="subjectName" placeholder="Enter subject name">
+                    
+                    <label for="subjectYear">Subject Year:</label>
+                    <input type="number" id="subjectYear" placeholder="Year">
+                    
+                    <label for="subjectSemester">Subject Semester:</label>
+                    <input type="number" id="subjectSemester" placeholder="Semester">
+                </div>
+
+                <div id="postUpdateFields" style="display: none;">
+                    <label for="subjectID">Subject ID (only for UPDATE):</label>
+                    <input type="number" id="subjectID" placeholder="ID (for UPDATE only)">
+
+                    <label for="subjectNamePost">Subject Name:</label>
+                    <input type="text" id="subjectNamePost" placeholder="Enter subject name">
+
+                    <label for="subjectCredits">Credits:</label>
+                    <input type="number" id="subjectCredits" placeholder="Credits">
+
+                    <label for="subjectYear">Year:</label>
+                    <input type="number" id="subjectYearPost" placeholder="Year">
+
+                    <label for="subjectSemester">Semester:</label>
+                    <input type="number" id="subjectSemesterPost" placeholder="Semester">
+                    
+                    <label for="subjectDesc">Description:</label>
+                    <input type="text" id="subjectDesc" placeholder="Description">
+                </div>
+
+                <div id="deleteFields" style="display: none;">
+                    <label for="deleteSubjectID">Subject ID:</label>
+                    <input type="number" id="deleteSubjectID" placeholder="Enter ID to delete">
+                </div>
+
+                <button id="submitBtn">Submit</button>
+            </div>
+
+            <div id="subjects" class="result-box"></div>
+
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
