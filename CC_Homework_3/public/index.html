@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Subject Manager</h1>
+    </div>
+    <div id="subjects-controls">
+        <button id="getSubjectsBtn">GET</button>
+        <button id="postSubjectsBtn">POST</button>
+        <button id="updateSubjectsBtn">UPDATE</button>
+        <button id="deleteSubjectsBtn">DELETE</button>
+    </div>
+
+    <div id="subjects-form">
+        <div id="getFields">
+            <label for="subjectName">Subject Name:</label>
+            <input type="text" id="subjectName" placeholder="Enter subject name">
+
+            <label for="subjectYear">Subject Year:</label>
+            <input type="number" id="subjectYear" placeholder="Year">
+
+            <label for="subjectSemester">Subject Semester:</label>
+            <input type="number" id="subjectSemester" placeholder="Semester">
+        </div>
+
+        <div id="postUpdateFields" style="display: none;">
+            <label for="subjectNamePost">Subject Name:</label>
+            <input type="text" id="subjectNamePost" placeholder="Enter subject name">
+
+            <label for="subjectCredits">Credits:</label>
+            <input type="number" id="subjectCredits" placeholder="Credits">
+
+            <label for="subjectYearPost">Year:</label>
+            <input type="number" id="subjectYearPost" placeholder="Year">
+
+            <label for="subjectSemesterPost">Semester:</label>
+            <input type="number" id="subjectSemesterPost" placeholder="Semester">
+
+            <label for="subjectDesc">Description:</label>
+            <input type="text" id="subjectDesc" placeholder="Description">
+
+            <label for="subjectImage">Subject Image (optional):</label>
+            <input type="file" id="subjectImage" accept="image/*">
+
+            <div id="imageOptions" style="display: none;">
+                <label>
+                    <input type="checkbox" id="deleteImageCheckbox">
+                    Delete existing image
+                </label>
+            </div>
+        </div>
+
+        <div id="deleteFields" style="display: none;">
+            <label for="deleteSubjectName">Subject Name:</label>
+            <input type="text" id="deleteSubjectName" placeholder="Enter subject name">
+        </div>
+
+        <button id="submitBtn">Submit</button>
+    </div>
+
+    <div id="subjects" class="result-box"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
